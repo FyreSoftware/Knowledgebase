@@ -11,10 +11,6 @@ import MessageBox from "@/components/MessageBox";
 import GreyRowBox from "@/components/elements/GreyRowBox";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
-interface Props {
-    id: string;
-}
-
 const QuestionsContainer = () => {
     const match = useRouteMatch<{ id: string }>();
     const { clearFlashes, clearAndAddHttpError } = useFlash();

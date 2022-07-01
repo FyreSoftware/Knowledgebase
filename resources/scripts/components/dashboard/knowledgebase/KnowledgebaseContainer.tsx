@@ -1,7 +1,6 @@
 import React, {useEffect} from 'react';
 import PageContentBlock from "@/components/elements/PageContentBlock";
 import useFlash from "@/plugins/useFlash";
-import { faBook } from "@fortawesome/free-solid-svg-icons";
 import useSWR from "swr";
 import {categories, Category} from "@/api/knowledgebase";
 import tw from "twin.macro";
@@ -34,7 +33,7 @@ const KnowledgebaseContainer = () => {
                         :
                         <div css={tw`w-full flex flex-wrap justify-evenly md:justify-between`}>
                             {data.map((category: Category) => (
-                                <TitledGreyBox title={category.name} css={tw`w-9/12 md:w-5/12 lg:w-3/10 mb-6`}>
+                                <TitledGreyBox title={category.name} css={tw`w-9/12 md:w-5/12 lg:w-[30%] mb-6`}>
                                     <div css={tw`h-16 whitespace-normal text-sm`}>
                                         <p dangerouslySetInnerHTML={{ __html: category.description }}/>
                                     </div>

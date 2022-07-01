@@ -1,10 +1,9 @@
 import React, {useEffect} from "react";
-import {RouteComponentProps, useRouteMatch} from "react-router-dom";
+import {useRouteMatch} from "react-router-dom";
 import useFlash from "@/plugins/useFlash";
 import useSWR from "swr";
 import {question} from "@/api/knowledgebase";
 import PageContentBlock from "@/components/elements/PageContentBlock";
-import {faBook} from "@fortawesome/free-solid-svg-icons";
 import tw from "twin.macro";
 import Spinner from "@/components/elements/Spinner";
 import TitledGreyBox from "@/components/elements/TitledGreyBox";
@@ -33,7 +32,7 @@ const ViewQuestion = () => {
                         <strong>Updated:</strong> {data.updated_at}<br/>
                         <strong>Created:</strong> {data.created_at}<br/>
                     </TitledGreyBox>
-                    <ContentBox css={tw`w-full mt-4 md:mt-0 md:ml-4 md:w-73/100`}>
+                    <ContentBox css={tw`w-full mt-4 md:mt-0 md:ml-4 md:w-[73%]`}>
                         <span dangerouslySetInnerHTML={{ __html: data.information }}/>
                     </ContentBox>
                 </div>
